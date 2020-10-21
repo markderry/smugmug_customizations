@@ -1,0 +1,338 @@
+/* SMUGMUG Customizations for MAD Photography */
+
+
+
+/* ######## Site Wide Fixes ######## */
+
+/* Hide the current breadcrumb home button and various levels 
+.sm-gallery-header.sm-gallery-cover-container .sm-gallery-cover-breadcrumbs li.sm-breadcrumbs-expand-button.sm-breadcrumb-item.sm-flex.sm-flex-items-end,
+.sm-gallery-header.sm-gallery-cover-container .sm-gallery-cover-breadcrumbs li:nth-child(1), 
+.sm-gallery-header.sm-gallery-cover-container .sm-gallery-cover-breadcrumbs li:nth-child(3), 
+.sm-gallery-header.sm-gallery-cover-container .sm-gallery-cover-breadcrumbs .sm-breadcrumbs-separator{
+  display: none;
+}
+*/
+
+/* Thumbnail Image Area */
+.sm-user-ui .sm-tile-status {
+    color: red !important;
+}
+
+/* Main Image Area + Removes Faded Overlay */
+.sm-user-ui .sm-gallery-image .sm-tile-status {
+    color: red !important;
+    background: 0.0;
+}
+
+/* 
+ * Instead of vertically centering portrait images within their tiles (a 50% shift downwards), only
+ * shift these by 25% in order to have a better chance of keeping people's heads in the frame.
+
+.sm-page-widget-galleries .sm-tiles-center-image img.sm-tile-limit-width.sm-tile-portrait, 
+.sm-page-widget-nodes .sm-tiles-center-image img.sm-tile-limit-width.sm-tile-portrait, 
+.sm-page-widget-pages .sm-tiles-center-image img.sm-tile-limit-width.sm-tile-portrait, 
+.sm-page-widget-folders .sm-tiles-center-image img.sm-tile-limit-width.sm-tile-portrait {
+  top: 25%;
+  -webkit-transform: translate(0,-25%);
+  -moz-transform: translate(0,-25%);
+  -ms-transform: translate(0,-25%);
+  -o-transform: translate(0,-25%);
+  -webkit-transform: translate(0,-25%);
+  transform: translate(0,-25%);
+}
+ */
+
+/* Make the menu nav bar text for the active page a different color */
+.sm-page-widget-nav-activepage>a {
+    color: #525252 !important;
+}
+
+/* Make the menu nav bar hover text for the active page a different color */
+.sm-page-widget-nav-activepage>a:hover {
+    color: #4f75a9 !important;
+}
+
+/* Customize the site for a specific folder */
+/* For anything in the Little Things Folder use a different color and logo */
+/*
+sm-page-node-xVpb7 .sm-page-widget-logo-align-left, .sm-page-parentnode-xVpb7 .sm-page-widget-logo-align-left:after {
+  content: "The Little Things Photography" !important;
+  font-family: Cinzel, Helvetica; 
+  font-size:30px;
+}
+
+sm-page-node-xVpb7 .sm-page-widget-logo-align-left, .sm-page-parentnode-xVpb7 .sm-page-widget-logo-text-container {
+  display: none !important;
+}
+*/
+
+/* Remove smugmug email */
+.sm-email-link {
+    visibility: hidden;
+    position: relative;
+}
+
+
+/* ###### Gallery Edits ###### */
+
+/*Add Download All label to the button*/
+/*.sm-user-ui .sm-gallery-cover-download-button:after {
+  content: ' Download';
+ 
+}
+.sm-user-ui .sm-gallery-cover-download-button  {
+  width: auto;
+}
+*/
+
+/* ###### Event Page Edits ###### */
+
+/* Change Favorite Heart Colors */
+/* Un-Favorite Icon */
+.sm-user-ui. .sm-button-image-favorited .sm-fonticon-Heart {
+    color: red !important;
+}
+
+.sm-user-ui .event-favorites-link .sm-fonticon-Heart {
+    color: red;
+}
+
+/* favorited heart */
+.sm-button-image-favorited .sm-fonticon-Heart {
+    color: #FF0000 !important;
+}
+
+
+/* Remove things that are not pretty */
+.sm-user-ui .sm-event-info #eventName,
+.sm-user-ui .sm-event-info #eventDate {
+    display: none;
+}
+
+.sm-user-ui .sm-event-info #eventLocation {
+    display: none;
+}
+
+.sm-user-ui .sm-event-info #eventDescription {
+    display: none;
+}
+
+/* Remove "Event" from UNLOCK event page*/
+#sm-node-password .sm-heading {
+    visibility: collapse;
+}
+
+/* Remove "Event" from event share on event page*/
+#shareEventLink {
+    visibility: hidden;
+    position: relative;
+}
+
+#shareEventLink:after {
+    visibility: visible;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    content: "Share Link";
+}
+
+/* Remove "Event Galleries" 
+This may work some day 
+@document url_prefix("https://www.markderry.smugmug.com/event/") {*/
+.sm-page-widget .sm-page-widget-header {
+    display: none;
+}
+
+
+/* make tiles for events lay out better */
+
+.sm-tiles-S.sm-tiles-1x1 .sm-tile-wrapper {
+    max-width: 400px;
+    width: 90%;
+    vertical-align: text-bottom;
+    margin: auto;
+    display: inline-block;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.sm-tiles-column-organic.sm-tiles-spacing-1,
+.sm-tiles-grid.sm-tiles-spacing-1 .sm-tiles-list {
+    text-align: center;
+    margin-left: -1px;
+}
+
+
+/* ######## Gallery Fixes ######## */
+/* Add the word "Download" after the download button 
+.sm-button.sm-button-image-download:after {
+  content: " Download" !important;
+  font-size: 100%;
+}
+*/
+
+/* Change the “Buy” Button Text */
+/*.sm-user-ui .sm-gallery-buymenu .sm-button:after {
+   content: '';
+}
+.sm-user-ui .sm-gallery-buymenu .sm-button-label {
+   display: none;
+}
+*/
+/*Change the BUY PHOTOS label*/
+/*.sm-gallery-cover-buy-button:after {
+content: ' Buy Prints';
+}
+.sm-gallery-cover-buy-button .sm-button-label {
+  display: none;
+}
+*/
+
+
+
+
+/* ######## Light Box Fixes ######## */
+
+/*
+1. Increase Icon Size
+
+The CSS below increases the size of the right icons, left icons,
+and navigation buttons.
+
+To target only the left icons replace `.sm-lightbox-v2-navbar`
+with `.sm-lightbox-v2-navbar-primary`
+
+To target only the right icons replace `.sm-lightbox-v2-navbar`
+with `.sm-lightbox-v2-navbar-secondary`
+*/
+.sm-user-ui .sm-lightbox-v2-navbar .sm-button {
+    padding: 0;
+}
+
+.sm-user-ui .sm-lightbox-v2-navbar .sm-icon-large {
+    width: 40px;
+    height: 40px;
+}
+
+.sm-user-ui .sm-lightbox-v2-navbar .sm-icon-small {
+    width: 40px;
+    height: 40px;
+}
+
+.sm-user-ui .sm-lightbox-v2-nav-button .sm-icon {
+    height: 40px;
+    width: 40px;
+}
+
+
+/*
+7. Move the image buttons to the bottom on desktop &
+tablet landscape viewports.
+
+Note: Tool tips are odd in that they overlap the buttons to the right
+until we replace them with a smarter version, coming soon
+*/
+
+@media screen and (max-width: 961px) {
+    .sm-user-ui .sm-lightbox-v2-primary-controls-list {
+        position: relative;
+        bottom: 0;
+        margin-left: auto;
+        transform: translate(-0%, 0);
+        display: grid;
+        width: 80%;
+        grid-auto-flow: column;
+    }
+
+    .sm-user-ui .sm-lightbox-v2-primary-controls-list .sm-button-square[data-selected="true"]::after {
+        border-top: 3px solid hotpink;
+        border-left: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    .sm-user-ui .sm-lightbox-v2-icon-button-compact {
+        height: 50px;
+        width: 50px;
+    }
+
+    .sm-user-ui .sm-lightbox-v2-content {
+        height: calc(100% - 2px);
+    }
+
+    /* make event links buttons in mobile */
+    .event-favorites-link {
+        display: block;
+        width: 180px;
+        margin-left: auto;
+        margin-right: auto;
+        color: #0F0F0F;
+        background-color: #CFCFCF;
+        font-size: 16px;
+        padding: 7px;
+        margin-top: 1px;
+    }
+
+    .event-favorites-link:hover {
+        background-color: #B5B5B5;
+    }
+
+    .sm-event-share-link {
+        display: block;
+        width: 180px;
+        margin-left: auto;
+        margin-right: auto;
+        color: #0F0F0F;
+        background-color: #CFCFCF;
+        font-size: 16px;
+        padding: 7px;
+        margin-top: 7px;
+    }
+
+    .sm-event-share-link:hover {
+        background-color: #B5B5B5;
+    }
+
+    /* Move buttons and links to center*/
+    .sm-event-links {
+        margin: auto;
+        width: 100%;
+    }
+
+    .sm-event-edit-button,
+    .event-favorites-link,
+    .sm-event-share-link {
+        margin-left: auto !important;
+        text-align: center !important;
+    }
+}
+
+
+/*Hide Fullscreen Button in Lightbox*/
+/* @media screen and (max-width: 961px) { */
+.sm-user-ui .sm-lightbox-v2 .user-ui-lightbox-fullscreen-button.sm-button {
+    display: none;
+}
+
+.sm-user-ui .sm-lightbox-v2 .user-ui-lightbox-favorite-button.sm-button {
+    color: red !important;
+}
+
+/*Hide Extra Download Button in Lightbox*/
+.sm-hide-large-and-up.sm-lightbox-v2-hide-landscape.sm-lightbox-v2-hideable.sm-flex.sm-flex-items-center {
+    display: none;
+}
+
+/* Hide Mobile Menu */
+.sm-lightbox-v2-navbar-primary .sm-component-menu:not(.sm-component-submenu)>.sm-component-menu-item {
+    display: none;
+}
+
+/*Hiding the BUY button from lightbox view*/
+.sm-user-ui .sm-lightbox-buy-button {
+    display: none !important;
+}
